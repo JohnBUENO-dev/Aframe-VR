@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+  <title>Trabalhando com imagens</title>
+     <!--
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script> -->
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+	  <a-assets>
+	    <img id="image1" src="C:/Users/john/Desktop/vr_experience_js/browsers/navegador2.jpg">
+	  
+	  </a-assets>
+	  <!--
+	  <a-image 
+	           
+			   src="#image1"
+               position="0.072 1.596 -2.621"
+               width="0.607"
+               height="0.380"
+			   scale="1 1 1">
+	  </a-image>
+	  -->
+	  <a-curvedimage src="#image1"
+                       theta-length="90"
+                       theta-start="135"
+                       radius="0.707"
+                       height="0.833"
+                       position="0 1.5 0"
+                       scale="3 3 3">
+        </a-curvedimage>
+	  <a-camera>
+        <a-cursor color="#32CD32"></a-cursor>
+      </a-camera>
+	
+	</a-scene>
+    </body>
+</html>
