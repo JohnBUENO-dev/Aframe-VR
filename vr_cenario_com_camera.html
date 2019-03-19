@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Cena com Camera</title>
+	  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por mrsiraphol - br.freepik.com</a> -->
+    
+    
+	<a-scene>
+	<!-- https://media.freestocktextures.com/cache/b6/8b/b68b09a56cfca58337e4b887edf42ea7.jpg-->
+	 <!-- orangered #FF4500	 X - Y - Z  rotation 90 graus Y rotation="90 0 0" rotation Z rotation"0 0 90"-->
+    <a-assets>
+	  <img id="metal-NRM" src="L08-IMGs/metal-1024-NRM.jpg">
+	  <img id="blue-wall" src="texture/wall-blue.jpg">   
+	</a-assets>
+	
+	<a-box         color="#FFFFFF"
+                   src="texture/wall-blue.jpeg"
+                   repeat="1 1"
+                   normal-map="#blue-wall"
+                   normal-texture-repeat="1 1"
+                   normal-scale="1 -1"
+                   roughness="0.5"
+                   width="40" height="10" 
+                   position="0 1 -7" rotation="0 0 0">
+     </a-box>
+     <!-- normal scale="-1 1" realiza alteracao na outra face do objeto entidades -->
+	 <a-box        
+	               color="#FFFFFF"
+				   src="L08-IMGs/metal-1024.jpg"
+                   repeat="1 1"
+                   normal-map="#metal-NRM"
+                   normal-texture-repeat="1 1"
+                   normal-scale="-1 1"
+                   roughness="0.5"
+                   width="40" height="10" 
+                   position="0 1 7" rotation="0 0 0">
+     </a-box>
+	 
+	 <a-box        color="#FFFFFF"
+                   src="texture/wall-blue.jpeg"
+                   repeat="1 1"
+                   normal-map="#blue-wall"
+                   normal-texture-repeat="1 1"
+				   normal-scale="1 -1"
+                   roughness="0.5" 
+				   width="60" height="10" 
+				   position="9 1 -2.5" rotation="0 90 0">
+     </a-box>
+	 <!-- normal scale="-1 1" realiza alteracao na outra face do objeto entidades -->
+  	<a-box         color="#FFFFFF"
+                   src="texture/wall-blue.jpeg"
+                   repeat="1 1"
+                   normal-map="#blue-wall"
+                   normal-texture-repeat="1 1"
+				   normal-scale="-1 1"
+                   roughness="0.5"
+                   width="40" height="10" 
+                   position="-9 1 -2.5" rotation="0 -90 0">
+     </a-box>
+	 
+	<!-- Chão do  cenario color LightSteelBlue-->
+	<a-plane position="0 0 -4" rotation="-90 0 0" radius="5" width="60" height="60" color="#708090"></a-plane>
+    <a-camera>
+        <a-cursor color="#32CD32"></a-cursor>
+    </a-camera>
+    </a-scene>	
+	
+  </body>
+ </html>
